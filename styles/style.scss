@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 1200px;
+  height: 1920px;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.air {
+  position: relative;
+  height: 750px;
+  width: 100%;
+  background-color: skyblue;
+  &__sun {
+    position: absolute;
+    height: 400px;
+  }
+  &__cloud {
+    position: absolute;
+    height: 400px;
+    &--one {
+      top: 250px;
+      left: 0;
+    }
+    &--two {
+      top: 180px;
+      left: 400px;
+    }
+    &--three {
+      top: 0;
+      left: 800px;
+    }
+  }
+}
+
+.grass {
+  position: relative;
+  height: 650px;
+  background-color: #00ff00;
+
+  &__shed {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    z-index: 40;
+  }
+
+  &__tree {
+    position: absolute;
+    &--one {
+      height: 480px;
+      top: -100px;
+      z-index: 30;
+    }
+    &--two {
+      right: -175px;
+      bottom: 10px;
+      z-index: 50;
+    }
+  }
+}
+
+.road {
+  height: 520px;
+  background-color: sandybrown;
+}
+
+.grassBorder {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  max-width: 100%;
+}

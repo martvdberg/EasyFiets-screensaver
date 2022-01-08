@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+}
+
+.wrapper {
+  width: 1200px;
+  height: 1920px;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.air {
+  position: relative;
+  height: 750px;
+  width: 100%;
+  background-color: skyblue;
+}
+.air__sun {
+  position: absolute;
+  height: 400px;
+}
+.air__cloud {
+  position: absolute;
+  height: 400px;
+}
+.air__cloud--one {
+  top: 250px;
+  left: 0;
+}
+.air__cloud--two {
+  top: 180px;
+  left: 400px;
+}
+.air__cloud--three {
+  top: 0;
+  left: 800px;
+}
+
+.grass {
+  position: relative;
+  height: 650px;
+  background-color: #00ff00;
+}
+.grass__shed {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  z-index: 40;
+}
+.grass__tree {
+  position: absolute;
+}
+.grass__tree--one {
+  height: 480px;
+  top: -100px;
+  z-index: 30;
+}
+.grass__tree--two {
+  right: -175px;
+  bottom: 10px;
+  z-index: 50;
+}
+
+.road {
+  height: 520px;
+  background-color: sandybrown;
+}
+
+.grassBorder {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  max-width: 100%;
+}/*# sourceMappingURL=style.css.map */
