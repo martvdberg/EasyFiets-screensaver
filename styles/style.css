@@ -6,69 +6,54 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: yellow;
 }
 
 .air {
   position: relative;
-  height: 750px;
-  width: 100%;
+  height: 40vh;
   background-color: skyblue;
 }
 .air__sun {
   position: absolute;
-  height: 400px;
+  height: 20vh;
 }
 .air__cloud {
   position: absolute;
-  height: 400px;
+  height: 25vh;
 }
 .air__cloud--one {
-  top: 250px;
-  left: 0;
+  top: 5vh;
+  left: 10vw;
 }
 .air__cloud--two {
-  top: 180px;
-  left: 400px;
+  top: 10vh;
+  left: 40vw;
 }
 .air__cloud--three {
-  top: 0;
-  left: 800px;
+  top: 0vh;
+  left: 80vw;
 }
 
 .grass {
   position: relative;
-  height: 650px;
-  background-color: #00ff00;
+  height: 35vh;
+  background-color: #0f0;
 }
 .grass__shed {
   position: absolute;
   bottom: 0;
-  left: 80px;
-  z-index: 40;
-}
-.grass__tree {
-  position: absolute;
-}
-.grass__tree--one {
-  height: 480px;
-  top: -100px;
-  z-index: 30;
-}
-.grass__tree--two {
-  right: -175px;
-  bottom: 10px;
-  z-index: 50;
+  right: 2vw;
+  height: 55vh;
 }
 
 .road {
-  height: 520px;
+  height: 25vh;
   background-color: sandybrown;
 }
 
 .grassBorder {
+  width: 100vw;
+  height: 8vh;
   position: absolute;
   bottom: 0;
-  height: 200px;
-  max-width: 100%;
 }/*# sourceMappingURL=style.css.map */
