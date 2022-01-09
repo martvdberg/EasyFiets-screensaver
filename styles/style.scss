@@ -14,7 +14,7 @@
   background-color: skyblue;
 
   &__sun {
-    position: absolute;
+    // position: absolute;
     height: 20vh;
   }
 
@@ -54,11 +54,11 @@
     &--one {
       height: 40vh;
       bottom: 20vh;
-      left: -15vw;
+      left: -10vh;
       z-index: 40;
     }
     &--two {
-      right: -40vw;
+      right: -25vh;
       bottom: 0;
       height: 65vh;
       z-index: 60;

@@ -14,7 +14,6 @@
   background-color: skyblue;
 }
 .air__sun {
-  position: absolute;
   height: 20vh;
 }
 .air__cloud {
@@ -52,11 +51,11 @@
 .grass__tree--one {
   height: 40vh;
   bottom: 20vh;
-  left: -15vw;
+  left: -10vh;
   z-index: 40;
 }
 .grass__tree--two {
-  right: -40vw;
+  right: -25vh;
   bottom: 0;
   height: 65vh;
   z-index: 60;
