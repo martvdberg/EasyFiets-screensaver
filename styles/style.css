@@ -44,6 +44,22 @@
   bottom: 0;
   right: 2vw;
   height: 55vh;
+  z-index: 50;
+}
+.grass__tree {
+  position: absolute;
+}
+.grass__tree--one {
+  height: 40vh;
+  bottom: 20vh;
+  left: -15vw;
+  z-index: 40;
+}
+.grass__tree--two {
+  right: -40vw;
+  bottom: 0;
+  height: 65vh;
+  z-index: 60;
 }
 
 .road {
