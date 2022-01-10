@@ -65,10 +65,26 @@
   height: 25vh;
   background-color: sandybrown;
 }
+.road__bike {
+  position: absolute;
+  bottom: 0;
+  z-index: 70;
+  height: 45vh;
+}
+.road__bike--ltr {
+  left: 0;
+}
+.road__bike--rtl {
+  height: 42vh;
+  bottom: 12vh;
+  right: 0;
+  z-index: 65;
+}
 
 .grassBorder {
   width: 100vw;
-  height: 8vh;
+  height: 11vh;
   position: absolute;
   bottom: 0;
+  z-index: 100;
 }/*# sourceMappingURL=style.css.map */

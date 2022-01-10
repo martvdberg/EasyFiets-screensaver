@@ -14,7 +14,6 @@
   background-color: skyblue;
 
   &__sun {
-    // position: absolute;
     height: 20vh;
   }
 
@@ -69,11 +68,28 @@
 .road {
   height: 25vh;
   background-color: sandybrown;
+
+  &__bike {
+    position: absolute;
+    bottom: 0;
+    z-index: 70;
+    height: 45vh;
+    &--ltr {
+      left: 0;
+    }
+    &--rtl {
+      height: 42vh;
+      bottom: 12vh;
+      right: 0;
+      z-index: 65;
+    }
+  }
 }
 
 .grassBorder {
   width: 100vw;
-  height: 8vh;
+  height: 11vh;
   position: absolute;
   bottom: 0;
+  z-index: 100;
 }
