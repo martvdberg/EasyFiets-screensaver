@@ -1,3 +1,25 @@
+@mixin animationDelay($time) {
+  animation-delay: $time;
+}
+
+@keyframes clouds {
+  from {
+    left: 100vw;
+  }
+  to {
+    left: -100vw;
+  }
+}
+
+@keyframes bikeRide {
+  from {
+    left: -1000vw;
+  }
+  to {
+    left: 1000vw;
+  }
+}
+
 * {
   margin: 0;
 }
@@ -20,17 +42,31 @@
   &__cloud {
     position: absolute;
     height: 25vh;
+    animation-name: clouds;
+    left: 100vw;
+    // animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     &--one {
       top: 5vh;
-      left: 10vw;
+      // left: 10vw;
+      animation-duration: 80s;
+
+      animation-delay: 0s;
     }
     &--two {
-      top: 10vh;
-      left: 40vw;
+      top: -10vh;
+      // left: 40vw;
+      animation-duration: 70s;
+
+      animation-delay: 28s;
     }
     &--three {
       top: 0vh;
-      left: 80vw;
+      //   left: 80vw;
+      animation-duration: 60s;
+
+      animation-delay: 40s;
     }
   }
 }
@@ -71,17 +107,59 @@
 
   &__bike {
     position: absolute;
-    bottom: 0;
-    z-index: 70;
-    height: 45vh;
+    animation-name: bikeRide;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 21s;
     &--ltr {
-      left: 0;
+      bottom: 0;
+      left: -100vw;
+      z-index: 70;
+      height: 45vh;
+      &--one {
+        @include animationDelay(0);
+      }
+      &--two {
+        @include animationDelay(3s);
+      }
+      &--three {
+        @include animationDelay(7s);
+      }
+      &--four {
+        @include animationDelay(11s);
+      }
+      &--five {
+        @include animationDelay(16s);
+      }
+      &--six {
+        @include animationDelay(23s);
+      }
     }
     &--rtl {
-      height: 42vh;
+      //   display: none;
       bottom: 12vh;
-      right: 0;
+      left: 100vw;
       z-index: 65;
+      height: 42vh;
+      animation-direction: reverse;
+      &--one {
+        @include animationDelay(11s);
+      }
+      &--two {
+        @include animationDelay(33s);
+      }
+      &--three {
+        @include animationDelay(47s);
+      }
+      &--four {
+        @include animationDelay(41s);
+      }
+      &--five {
+        @include animationDelay(50s);
+      }
+      &--six {
+        @include animationDelay(2s);
+      }
     }
   }
 }

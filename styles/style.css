@@ -1,3 +1,35 @@
+@-webkit-keyframes clouds {
+  from {
+    left: 100vw;
+  }
+  to {
+    left: -100vw;
+  }
+}
+@keyframes clouds {
+  from {
+    left: 100vw;
+  }
+  to {
+    left: -100vw;
+  }
+}
+@-webkit-keyframes bikeRide {
+  from {
+    left: -1000vw;
+  }
+  to {
+    left: 1000vw;
+  }
+}
+@keyframes bikeRide {
+  from {
+    left: -1000vw;
+  }
+  to {
+    left: 1000vw;
+  }
+}
 * {
   margin: 0;
 }
@@ -19,18 +51,34 @@
 .air__cloud {
   position: absolute;
   height: 25vh;
+  -webkit-animation-name: clouds;
+          animation-name: clouds;
+  left: 100vw;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 .air__cloud--one {
   top: 5vh;
-  left: 10vw;
+  -webkit-animation-duration: 80s;
+          animation-duration: 80s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 .air__cloud--two {
-  top: 10vh;
-  left: 40vw;
+  top: -10vh;
+  -webkit-animation-duration: 70s;
+          animation-duration: 70s;
+  -webkit-animation-delay: 28s;
+          animation-delay: 28s;
 }
 .air__cloud--three {
   top: 0vh;
-  left: 80vw;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 40s;
+          animation-delay: 40s;
 }
 
 .grass {
@@ -67,18 +115,75 @@
 }
 .road__bike {
   position: absolute;
+  -webkit-animation-name: bikeRide;
+          animation-name: bikeRide;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 21s;
+          animation-duration: 21s;
+}
+.road__bike--ltr {
   bottom: 0;
+  left: -100vw;
   z-index: 70;
   height: 45vh;
 }
-.road__bike--ltr {
-  left: 0;
+.road__bike--ltr--one {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+.road__bike--ltr--two {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.road__bike--ltr--three {
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+.road__bike--ltr--four {
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+}
+.road__bike--ltr--five {
+  -webkit-animation-delay: 16s;
+          animation-delay: 16s;
+}
+.road__bike--ltr--six {
+  -webkit-animation-delay: 23s;
+          animation-delay: 23s;
 }
 .road__bike--rtl {
-  height: 42vh;
   bottom: 12vh;
-  right: 0;
+  left: 100vw;
   z-index: 65;
+  height: 42vh;
+  animation-direction: reverse;
+}
+.road__bike--rtl--one {
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+}
+.road__bike--rtl--two {
+  -webkit-animation-delay: 33s;
+          animation-delay: 33s;
+}
+.road__bike--rtl--three {
+  -webkit-animation-delay: 47s;
+          animation-delay: 47s;
+}
+.road__bike--rtl--four {
+  -webkit-animation-delay: 41s;
+          animation-delay: 41s;
+}
+.road__bike--rtl--five {
+  -webkit-animation-delay: 50s;
+          animation-delay: 50s;
+}
+.road__bike--rtl--six {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .grassBorder {
