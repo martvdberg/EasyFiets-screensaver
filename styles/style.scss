@@ -94,6 +94,30 @@ body {
   position: relative;
   height: 15vh;
   background-color: sandybrown;
+
+  &__bike {
+    position: absolute;
+    bottom: 0;
+    height: 40vh;
+    z-index: 70;
+    transform: translateX(-100%);
+    animation-name: clouds;
+    animation-duration: 3.5s;
+    animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+
+    // display: none;
+    // &--six {
+    //   //   animation-delay: 5s;
+    //   display: initial;
+    // }
+
+    &--reverse {
+      animation-direction: reverse;
+      transform: rotateX(180deg);
+      bottom: 5vh;
+    }
+  }
 }
 
 .border {
@@ -105,5 +129,6 @@ body {
     bottom: 7vh;
     height: 10vh;
     max-width: 100vw;
+    z-index: 80;
   }
 }
