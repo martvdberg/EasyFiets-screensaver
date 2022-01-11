@@ -1,33 +1,31 @@
-@mixin animationDelay($time) {
-  animation-delay: $time;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 @keyframes clouds {
   from {
-    left: 100vw;
+    transform: translateX(-100%);
   }
   to {
-    left: -100vw;
+    transform: translateX(100vw);
   }
 }
 
-@keyframes bikeRide {
+@keyframes sun {
   from {
-    left: -1000vw;
+    transform: rotateZ(0deg);
   }
   to {
-    left: 1000vw;
+    transform: rotateZ(-359deg);
   }
-}
-
-* {
-  margin: 0;
-}
-
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .air {
@@ -36,37 +34,36 @@
   background-color: skyblue;
 
   &__sun {
+    position: absolute;
     height: 20vh;
+    right: 0;
+
+    animation: sun;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   &__cloud {
     position: absolute;
     height: 25vh;
+    left: 0;
+    transform: translateX(-100%);
     animation-name: clouds;
-    left: 100vw;
-    // animation-duration: 10s;
-    animation-iteration-count: infinite;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
     &--one {
-      top: 5vh;
-      // left: 10vw;
-      animation-duration: 80s;
-
-      animation-delay: 0s;
+      top: 7vh;
+      animation-duration: 40s;
     }
     &--two {
-      top: -10vh;
-      // left: 40vw;
+      top: 5vh;
       animation-duration: 70s;
-
-      animation-delay: 28s;
+      animation-delay: 20s;
     }
     &--three {
-      top: 0vh;
-      //   left: 80vw;
-      animation-duration: 60s;
-
-      animation-delay: 40s;
+      animation-duration: 45s;
+      animation-delay: 60s;
     }
   }
 }
@@ -78,96 +75,35 @@
 
   &__shed {
     position: absolute;
+    width: 90vw;
+    right: 0;
     bottom: 0;
-    right: 2vw;
-    height: 55vh;
     z-index: 50;
   }
 
   &__tree {
     position: absolute;
-    &--one {
-      height: 40vh;
-      bottom: 20vh;
-      left: -10vh;
-      z-index: 40;
-    }
-    &--two {
-      right: -25vh;
-      bottom: 0;
-      height: 65vh;
-      z-index: 60;
-    }
+    bottom: 5%;
+    height: 65vh;
+    transform: translateX(-48%);
+    z-index: 60;
   }
 }
 
 .road {
-  height: 25vh;
+  position: relative;
+  height: 15vh;
   background-color: sandybrown;
-
-  &__bike {
-    position: absolute;
-    animation-name: bikeRide;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 21s;
-    &--ltr {
-      bottom: 0;
-      left: -100vw;
-      z-index: 70;
-      height: 45vh;
-      &--one {
-        @include animationDelay(0);
-      }
-      &--two {
-        @include animationDelay(3s);
-      }
-      &--three {
-        @include animationDelay(7s);
-      }
-      &--four {
-        @include animationDelay(11s);
-      }
-      &--five {
-        @include animationDelay(16s);
-      }
-      &--six {
-        @include animationDelay(23s);
-      }
-    }
-    &--rtl {
-      //   display: none;
-      bottom: 12vh;
-      left: 100vw;
-      z-index: 65;
-      height: 42vh;
-      animation-direction: reverse;
-      &--one {
-        @include animationDelay(11s);
-      }
-      &--two {
-        @include animationDelay(33s);
-      }
-      &--three {
-        @include animationDelay(47s);
-      }
-      &--four {
-        @include animationDelay(41s);
-      }
-      &--five {
-        @include animationDelay(50s);
-      }
-      &--six {
-        @include animationDelay(2s);
-      }
-    }
-  }
 }
 
-.grassBorder {
-  width: 100vw;
-  height: 11vh;
-  position: absolute;
-  bottom: 0;
-  z-index: 100;
+.border {
+  position: relative;
+  height: 10vh;
+  background-color: #0f0;
+  &__grass {
+    position: absolute;
+    bottom: 7vh;
+    height: 10vh;
+    max-width: 100vw;
+  }
 }

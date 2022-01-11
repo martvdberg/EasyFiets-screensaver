@@ -1,84 +1,105 @@
-@-webkit-keyframes clouds {
-  from {
-    left: 100vw;
-  }
-  to {
-    left: -100vw;
-  }
-}
-@keyframes clouds {
-  from {
-    left: 100vw;
-  }
-  to {
-    left: -100vw;
-  }
-}
-@-webkit-keyframes bikeRide {
-  from {
-    left: -1000vw;
-  }
-  to {
-    left: 1000vw;
-  }
-}
-@keyframes bikeRide {
-  from {
-    left: -1000vw;
-  }
-  to {
-    left: 1000vw;
-  }
-}
 * {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.wrapper {
-  width: 100vw;
-  height: 100vh;
+body {
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
+@-webkit-keyframes clouds {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+}
+
+@keyframes clouds {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+}
+@-webkit-keyframes sun {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-359deg);
+            transform: rotateZ(-359deg);
+  }
+}
+@keyframes sun {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(-359deg);
+            transform: rotateZ(-359deg);
+  }
+}
 .air {
   position: relative;
   height: 40vh;
   background-color: skyblue;
 }
 .air__sun {
+  position: absolute;
   height: 20vh;
+  right: 0;
+  -webkit-animation: sun;
+          animation: sun;
+  -webkit-animation-duration: 25s;
+          animation-duration: 25s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .air__cloud {
   position: absolute;
   height: 25vh;
+  left: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-animation-name: clouds;
           animation-name: clouds;
-  left: 100vw;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .air__cloud--one {
-  top: 5vh;
-  -webkit-animation-duration: 80s;
-          animation-duration: 80s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  top: 7vh;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
 }
 .air__cloud--two {
-  top: -10vh;
+  top: 5vh;
   -webkit-animation-duration: 70s;
           animation-duration: 70s;
-  -webkit-animation-delay: 28s;
-          animation-delay: 28s;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
 }
 .air__cloud--three {
-  top: 0vh;
-  -webkit-animation-duration: 60s;
-          animation-duration: 60s;
-  -webkit-animation-delay: 40s;
-          animation-delay: 40s;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
+  -webkit-animation-delay: 60s;
+          animation-delay: 60s;
 }
 
 .grass {
@@ -88,108 +109,34 @@
 }
 .grass__shed {
   position: absolute;
+  width: 90vw;
+  right: 0;
   bottom: 0;
-  right: 2vw;
-  height: 55vh;
   z-index: 50;
 }
 .grass__tree {
   position: absolute;
-}
-.grass__tree--one {
-  height: 40vh;
-  bottom: 20vh;
-  left: -10vh;
-  z-index: 40;
-}
-.grass__tree--two {
-  right: -25vh;
-  bottom: 0;
+  bottom: 5%;
   height: 65vh;
+  -webkit-transform: translateX(-48%);
+          transform: translateX(-48%);
   z-index: 60;
 }
 
 .road {
-  height: 25vh;
+  position: relative;
+  height: 15vh;
   background-color: sandybrown;
 }
-.road__bike {
-  position: absolute;
-  -webkit-animation-name: bikeRide;
-          animation-name: bikeRide;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-duration: 21s;
-          animation-duration: 21s;
-}
-.road__bike--ltr {
-  bottom: 0;
-  left: -100vw;
-  z-index: 70;
-  height: 45vh;
-}
-.road__bike--ltr--one {
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-}
-.road__bike--ltr--two {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-.road__bike--ltr--three {
-  -webkit-animation-delay: 7s;
-          animation-delay: 7s;
-}
-.road__bike--ltr--four {
-  -webkit-animation-delay: 11s;
-          animation-delay: 11s;
-}
-.road__bike--ltr--five {
-  -webkit-animation-delay: 16s;
-          animation-delay: 16s;
-}
-.road__bike--ltr--six {
-  -webkit-animation-delay: 23s;
-          animation-delay: 23s;
-}
-.road__bike--rtl {
-  bottom: 12vh;
-  left: 100vw;
-  z-index: 65;
-  height: 42vh;
-  animation-direction: reverse;
-}
-.road__bike--rtl--one {
-  -webkit-animation-delay: 11s;
-          animation-delay: 11s;
-}
-.road__bike--rtl--two {
-  -webkit-animation-delay: 33s;
-          animation-delay: 33s;
-}
-.road__bike--rtl--three {
-  -webkit-animation-delay: 47s;
-          animation-delay: 47s;
-}
-.road__bike--rtl--four {
-  -webkit-animation-delay: 41s;
-          animation-delay: 41s;
-}
-.road__bike--rtl--five {
-  -webkit-animation-delay: 50s;
-          animation-delay: 50s;
-}
-.road__bike--rtl--six {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
 
-.grassBorder {
-  width: 100vw;
-  height: 11vh;
+.border {
+  position: relative;
+  height: 10vh;
+  background-color: #0f0;
+}
+.border__grass {
   position: absolute;
-  bottom: 0;
-  z-index: 100;
+  bottom: 7vh;
+  height: 10vh;
+  max-width: 100vw;
 }/*# sourceMappingURL=style.css.map */
